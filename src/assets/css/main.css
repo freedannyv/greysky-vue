@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter:wght@400;500&family=Work+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Work+Sans&display=swap");
+
+:root {
+  --primary-font: #252526;
+  --primary-green: #377364;
+  --primary-blue: #375673;
+  --primary-red: #c63434;
+  --grey-light: #e0e2e4;
+  --grey-default: #939597;
+  --status-green: #518103;
+  --status-yellow: #e4d33a;
+  --status-red: #c63434;
+}
+
+body,
+html {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  color: var(--primary-font);
+  margin: 0;
+  padding: 0;
+}
+
+select {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+select:focus {
+  outline: none;
+}
+
+.header {
+  font-family: "Bitter", serif;
+  font-size: 24px;
+  font-weight: 500;
+}
+input:focus {
+  outline: none;
+}
+
+.input-field {
+  padding: 8px 12px;
+  border: 1px solid #e0e2e4;
+  border-radius: 4px;
+  flex: 1;
+}
+
+.input-field::placeholder {
+  color: var(--grey-default);
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+}
+
+.btn {
+  color: white;
+  border-radius: 4px;
+  border: none;
+  padding: 6px 16px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.btn:hover {
+  opacity: 0.9;
+}
