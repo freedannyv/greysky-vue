@@ -10,11 +10,7 @@
         </Product>
       </div>
     </div>
-    <FooterSection
-      :prodLength="productsLength"
-      @sortBy="sortProducts"
-      @paginateBy="paginateProducts"
-    />
+    <FooterSection @sortBy="sortProducts" @paginateBy="paginateProducts" />
   </div>
 </template>
 
@@ -154,6 +150,11 @@ export default {
       ],
     };
   },
+  provide() {
+    return {
+      productsLength: this.productsLength,
+    };
+  },
   computed: {
     pagination() {
       return this.filteredProducts.length
@@ -218,7 +219,7 @@ export default {
     grid-row-gap: 0px;
   }
 }
-.card-container {
+#app .card-container {
   margin-top: 16px;
   background: #fff;
   padding: 16px;

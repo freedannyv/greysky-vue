@@ -27,8 +27,8 @@
 
 <script>
 export default {
-  name: "PaginateSection",
-  props: ["prodLength"],
+  name: "FooterSection",
+  inject: ["productsLength"],
   data() {
     return {
       paginationValue: 10,
@@ -36,7 +36,7 @@ export default {
   },
   computed: {
     totalPages() {
-      let totalPages = Math.ceil(this.prodLength / this.paginationValue);
+      let totalPages = Math.ceil(this.productsLength / this.paginationValue);
       return totalPages;
     },
   },

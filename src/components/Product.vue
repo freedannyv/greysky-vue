@@ -29,9 +29,9 @@
       </div>
     </div>
     <Transition name="fade">
-      <ProductExtra v-show="displayProductDetails" :product="product">
+      <ProductExtra v-show="displayProductDetails">
         <template v-slot:image>
-          <div v-if="product.image" class="image-container">
+          <div v-if="product.image" style="height: 120px; width: 100%">
             <img :src="product.image" :alt="product.name" class="card-image" />
           </div>
         </template>
@@ -84,7 +84,6 @@ export default {
     formatDate() {
       if (this.product?.date != null) {
         const date = new Date(this.product.date * 1000);
-        console.log(date);
         return `${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`;
       } else {
         return "";

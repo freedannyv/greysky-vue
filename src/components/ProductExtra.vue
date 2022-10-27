@@ -13,15 +13,13 @@ export default {
 </script>
 
 <style scoped>
-.image-container {
-  height: 120px;
-}
-
 .card-image {
   object-fit: cover;
   object-position: center;
   width: 100%;
   height: 100%;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 .title-decoration {
   padding: 10px 0;
